@@ -2271,6 +2271,16 @@ class Nodes
       return Request::Request("/nodes/$node/status", $data, "POST");
   }
   /**
+    * Get Node current status
+    * POST /api2/json/nodes/{node}/status
+    * @param string   $node     The cluster node name.
+    * @param array    $data
+  */
+  public function NodeStatus($node)
+  {
+      return Request::Request("/nodes/$node/status", "GET");
+  }
+  /**
     * Stop all VMs and Containers.
     * POST /api2/json/nodes/{node}/stopall
     * @param string   $node     The cluster node name.
